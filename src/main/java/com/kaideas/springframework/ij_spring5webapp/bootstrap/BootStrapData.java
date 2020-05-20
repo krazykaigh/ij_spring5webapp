@@ -33,8 +33,8 @@ public class BootStrapData implements CommandLineRunner {
 
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
-        ddd.setPublisher(wiley);
-        wiley.getBooks().add(ddd);
+//        ddd.setPublisher(wiley);
+//        wiley.getBooks().add(ddd);
 
         authorRepository.save(eric);
         bookRepository.save(ddd);
@@ -45,8 +45,8 @@ public class BootStrapData implements CommandLineRunner {
 
         rod.getBooks().add(noEJB);
         noEJB.getAuthors().add(rod);
-        noEJB.setPublisher(wiley);
-        wiley.getBooks().add(noEJB);
+//        noEJB.setPublisher(wiley);
+//        wiley.getBooks().add(noEJB);
 
         authorRepository.save(rod);
         bookRepository.save(noEJB);
@@ -55,7 +55,7 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Books: " + bookRepository.count());
         System.out.println("Number of Publishers: " + publisherRepository.count());
-        System.out.println("Wiley Number of Books: " + wiley.getBooks().size());
+//        System.out.println("Wiley Number of Books: " + wiley.getBooks().size());
 
     }
 }

@@ -1,8 +1,9 @@
 package com.kaideas.springframework.ij_spring5webapp.domain;
 
-import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by kt on 05/16/2020
@@ -20,15 +21,10 @@ public class Publisher {
     private String state;
     private String zip;
 
-    @OneToMany
-            /*(
-            mappedBy = "post",
-            orphanRemoval = true,
-            cascade = CascadeType.ALL)
-            */
-    @JoinColumn(name = "publisher_id")
+/*    @OneToMany
+    @JoinColumn(name = "publisher_id" )
     private Set<Book> books = new HashSet<>();
-
+*/
     public Publisher() {
     }
 
@@ -86,6 +82,7 @@ public class Publisher {
     public void setZip(String zip) {
         this.zip = zip;
     }
+/*
 
     public void setBooks(Set<Book> books) {
         this.books = books;
@@ -95,6 +92,7 @@ public class Publisher {
         return books;
     }
 
+*/
     @Override
     public String toString() {
         return "Publisher{" +
